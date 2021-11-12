@@ -1,31 +1,304 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
 .header {
+  display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  position: relative;
+  align-items: center;
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  background-image: url(/Users/Kolya/dev/how-to-learn/images/logo_place_header.svg);
+  background-repeat: no-repeat;
+  width: 183px;
+  height: 32px;
+}
+.logo__place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 2;
+}
+.header__title {
+  align-items: center;
+  margin-left: 64px;
+  width: 730px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: bold;
+  z-index: 2;
+}
+.header__subtitle {
+  position: absolute;
+  width: 338px;
+  bottom: 30px;
+  left: 64px;
+  z-index: 2;
+}
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
 .header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  background-color: #2f80ed;
   height: 568px;
   width: 568px;
 }
-
+.header__main-illustrator{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+  height: 608px;
+  width: 765px;
+}
+.content {
+  margin: auto;
+}
+.description {
+  margin: 100px 0;
+}
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.two-columns__brief {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+  width: 175px;
+  margin-top: 0;
+}
+.two-columns__main-text { 
+  width: 80%;
+  min-width: 784px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.two-columns__paragraph:first-child {
+  margin-bottom: 30px;
+}
+.two-columns__paragraph:last-child {
+  margin-top: 30px;
+}
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.digits {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 100px;
+}
+.section-title {
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+.section-subtitle {
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px auto 0;
+}
+.table {
+  width: 1100px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.table__cell {
+  width: 250px;
+  margin: 60px 0 0 0;
+}
+.table__heading {
+  font-size: 24px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.table__text {
+  margin: 20px 0;
+  line-height: 1.2;
+  font-size: 18px;
+}
+.feynman {
+  height: 890px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  background-image: url(/Users/Kolya/dev/how-to-learn/images/feynman.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.feynman__title {
+  margin: 100px auto 70px;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+}
+.feynman__subtitle {
+  margin: 0 auto 0;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
 /* и элемента с модификатором вида ключ-значение */
+.kaufman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  position: relative;
+  z-index: 0;
+}
+.section-title_theme_dark {
+  width: 60%;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+.section-subtitle_theme_dark {
+  text-align: center;
+  color: white;
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+.table_theme_dark {
+  color: white;
+}
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
+  margin-top: 80px 0 0 0;
+}
+.table__heading_theme_dark {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+.table__text_theme_dark {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+.kaufman__triangle {
+  background-image: url(/Users/Kolya/dev/how-to-learn/images/kaufman-triangle.svg);
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  background-size: cover;
+  z-index: -1;
+}
+.footer {
+  background-color: #1f1f1f;
+  min-height: 350px;
+  color: white;
+  display: flex;
+  padding: 60px 0 40px;
+}
+.footer_columns {
+  width: 90%;
+  margin: 60px auto 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_column__content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo__place_footer {
+  height: 35px;
+  width: 183px;
+}
+.footer_author {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer_column__content_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+.footer_column__content_social {
+  display: flex;
+  flex-direction: column;
+}
+.footer_column-heading {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer_social-icon {
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+}
+.footer_column-link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
 }
